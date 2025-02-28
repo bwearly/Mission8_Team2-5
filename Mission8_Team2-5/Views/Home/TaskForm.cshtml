@@ -1,0 +1,45 @@
+@model TModel
+
+@{
+    Layout = null;
+}
+
+<h1>Task Form</h1>
+
+<form method="post">
+    <label asp-for="Task">Task:</label>
+    <input asp-for="Title"/>
+    <br/>
+
+    <label asp-for="DueDate">Due Date:</label>
+    <input asp-for="DueDate"/>
+    <br/>
+    
+    <label asp-for="Quadrant">Quadrant:</label>
+    <select asp-for="Quadrant">
+        <option value="1">Important / Urgent</option>
+        <option value="2">Important / Not Urgent</option>
+        <option value="3">Not Important / Urgent</option>
+        <option value="4">Not Important / Not Urgent</option>
+    </select>
+    <br/>
+
+    <label asp-for="CategoryId">Category:</label>
+    <select asp-for="CategoryId">
+        <option value="">Select a Category:</option>
+        @foreach (Category c in ViewBag.Category)
+        {
+            <option value="@c.CategoryId">@c.CategoryName</option>
+        }
+    </select>
+    <br/>
+
+    <label asp-for="Completed">Is this task completed?</label>
+    <select asp-for="Completed">
+        <option value="True">Yes</option>
+        <option value="False">No</option>
+    </select>
+    <br/>
+    
+    <button type="submit">Submit Task</button>
+</form>
