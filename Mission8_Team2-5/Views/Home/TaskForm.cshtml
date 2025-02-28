@@ -10,7 +10,7 @@
     <input type="hidden" asp-for="TaskId" />
     
     <label asp-for="TaskName">Task:</label>
-    <input asp-for="TaskName"/>
+    <input asp-for="TaskName" class="form-control"/>
     <br/>
 
     <label asp-for="DueDate">Due Date:</label>
@@ -18,7 +18,7 @@
     <br/>
 
     <label asp-for="Quadrant">Quadrant:</label>
-    <select asp-for="Quadrant">
+    <select asp-for="Quadrant" class="form-control">
         <option value="1">Important / Urgent</option>
         <option value="2">Important / Not Urgent</option>
         <option value="3">Not Important / Urgent</option>
@@ -27,7 +27,7 @@
     <br/>
 
     <label asp-for="CategoryId">Category:</label>
-    <select asp-for="CategoryId">
+    <select asp-for="CategoryId" class="form-control">
         <option value="">Select a Category:</option>
         @foreach (Category c in ViewBag.Categories)
         {
@@ -37,11 +37,11 @@
     <br/>
 
     <label asp-for="Completed">Is this task completed?</label>
-    <select asp-for="Completed">
+    <select asp-for="Completed" class="form-control">
         <option value="true">Yes</option>
         <option value="false">No</option>
     </select>
     <br/>
 
-    <button type="submit">Save Task</button>
+    <button class="btn btn-green" type="submit">Save Task</button>
 </form>

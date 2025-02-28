@@ -50,29 +50,16 @@ namespace Mission8_Team2_5.Controllers
             ViewBag.Categories = _repo.Categories;
             var taskToEdit = _repo.Tasks.SingleOrDefault(x => x.TaskId == id);
 
-            if (taskToEdit == null)
-            {
-                return NotFound();
-            }
-
             return View("TaskForm", taskToEdit);
         }
 
         [HttpPost]
         public IActionResult EditTask(ToDoTask editTask)
         {
-            if (ModelState.IsValid)
-            {
-                _repo.Update(editTask);
-                _repo.SaveChanges();
+            _repo.Update(editTask);
+            _repo.SaveChanges();
 
-                return RedirectToAction("Index");
-            }
-            else
-            {
-                ViewBag.Categories = _repo.Categories;
-                return View("TaskForm", editTask);
-            }
+            return RedirectToAction("Index");
         }
 
         [HttpGet]
