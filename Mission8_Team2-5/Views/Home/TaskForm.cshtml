@@ -19,6 +19,7 @@
 
     <label asp-for="Quadrant">Quadrant:</label>
     <select asp-for="Quadrant" class="form-control">
+        <option value="">Select a priority</option>
         <option value="1">Important / Urgent</option>
         <option value="2">Important / Not Urgent</option>
         <option value="3">Not Important / Urgent</option>
@@ -38,6 +39,7 @@
 
     <label asp-for="Completed">Is this task completed?</label>
     <select asp-for="Completed" class="form-control">
+        <option value="">Select a Completion Status</option>
         <option value="true">Yes</option>
         <option value="false">No</option>
     </select>
