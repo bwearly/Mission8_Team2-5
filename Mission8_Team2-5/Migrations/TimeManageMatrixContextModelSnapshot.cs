@@ -56,7 +56,7 @@ namespace Mission8_Team2_5.Migrations
 
             modelBuilder.Entity("Mission8_Team2_5.Models.Task", b =>
                 {
-                    b.Property<int>("TaskID")
+                    b.Property<int>("TaskId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
@@ -76,7 +76,7 @@ namespace Mission8_Team2_5.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.HasKey("TaskID");
+                    b.HasKey("TaskId");
 
                     b.HasIndex("CategoryId");
 

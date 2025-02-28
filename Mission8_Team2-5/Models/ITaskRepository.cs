@@ -5,6 +5,12 @@
         List<Task> Tasks { get; }
         List<Category> Categories { get; }
 
+        void Add(Task task);
 
+        void Update(Task task);
+
+        void Delete(Task task);
+
+        void SaveChanges();
     }
 }

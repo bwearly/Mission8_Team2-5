@@ -1,13 +1,13 @@
-using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using SQLitePCL;
 using Mission8_Team2_5.Models;
+using System.Linq;
+using Task = Mission8_Team2_5.Models.Task;
 
 namespace Mission8_Team2_5.Controllers
 {
     public class HomeController : Controller
-    {       
-        private ITaskRepository _repo;
+    {
+        private readonly ITaskRepository _repo;
 
         public HomeController(ITaskRepository temp)
         {
@@ -16,65 +16,85 @@ namespace Mission8_Team2_5.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var tasks = _repo.Tasks;
+            return View(tasks);
         }
 
-        //[HttpGet]
-        //public IActionResult TaskForm()
-        //{
-        //    ViewBag.Categories = _repo.Categories.ToList();
+        [HttpGet]
+        public IActionResult TaskForm()
+        {
+            ViewBag.Categories = _repo.Categories;
+            return View(new Task());
+        }
 
-        //    return View("TaskForm", new Task());
-        //}
+        [HttpPost]
+        public IActionResult TaskForm(Task response)
+        {
+            if (ModelState.IsValid)
+            {
+                _repo.Add(response);
+                _repo.SaveChanges();
 
-        //[HttpPost]
-        //public IActionResult TaskForm(Task reponse)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        _repo.Tasks.Add(response);
-        //        _repo.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                ViewBag.Categories = _repo.Categories;
+                return View(response);
+            }
+        }
 
-        //        return View("Confirmation", reponse);
-        //    }
-        //    else
-        //    {
-        //        ViewBag.Categories = _repo.Categories.ToList();
-        //        return View(response);
-        //    }
-        //}
+        [HttpGet]
+        public IActionResult EditTask(int id)
+        {
+            ViewBag.Categories = _repo.Categories;
+            var taskToEdit = _repo.Tasks.SingleOrDefault(x => x.TaskId == id);
 
-        //[HttpGet]
-        //public IActionResult EditTask(int id)
-        //{
-        //    ViewBag.Categories = _repo.Categories.ToList();
-        //    var taskToEdit = _repo.Task.Single(x => x.TaskId == id);
+            if (taskToEdit == null)
+            {
+                return NotFound();
+            }
 
-        //    return View("TaskForm", taskToEdit);
-        //}
+            return View("TaskForm", taskToEdit);
+        }
 
-        //[HttpPost]
-        //public IActionResult EditTask(Task editTask)
-        //{
-        //    _repo.Update(editTask);
-        //    _repo.SaveChanges();
+        [HttpPost]
+        public IActionResult EditTask(Task editTask)
+        {
+            if (ModelState.IsValid)
+            {
+                _repo.Update(editTask);
+                _repo.SaveChanges();
 
-        //    return RedirectToAction("Index");
-        //}
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                ViewBag.Categories = _repo.Categories;
+                return View("TaskForm", editTask);
+            }
+        }
 
-        //[HttpGet]
-        //public IActionResult DeleteTask(int id)
-        //{
-        //    var recordToDelete = _repo.Tasks.Single(x => x.TaskId == id);
-        //    return View(recordToDelete);
-        //}
+        [HttpGet]
+        public IActionResult DeleteTask(int id)
+        {
+            var recordToDelete = _repo.Tasks.SingleOrDefault(x => x.TaskId == id);
 
-        //[HttpPost]
-        //public IActionResult DeleteTask(Task deleteTask)
-        //{
-        //    _repo.Task.Remove(deleteTask);
-        //    _repo.SaveChanges();
-        //    return RedirectToAction("Delete");
-        //}
+            if (recordToDelete == null)
+            {
+                return NotFound();
+            }
+
+            return View(recordToDelete);
+        }
+
+        [HttpPost]
+        public IActionResult DeleteTask(Task deleteTask)
+        {
+            _repo.Delete(deleteTask);
+            _repo.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
     }
 }

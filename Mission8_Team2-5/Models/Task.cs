@@ -7,7 +7,7 @@ namespace Mission8_Team2_5.Models
     {
         [Required]
         [Key]
-        public int TaskID { get; set; }
+        public int TaskId { get; set; }
         [Required]
         public string TaskName { get; set; }
         public DateOnly? DueDate { get; set; }

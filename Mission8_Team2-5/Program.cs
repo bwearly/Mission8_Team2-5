@@ -8,7 +8,7 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<TimeManageMatrixContext>(options =>
 {
-    options.UseSqlite(builder.Configuration["ConnectionStrings : DatabaseConnection"]);
+    options.UseSqlite(builder.Configuration["ConnectionStrings:DatabaseConnection"]);
 });
 
 builder.Services.AddScoped<ITaskRepository, EFTaskRepository>();

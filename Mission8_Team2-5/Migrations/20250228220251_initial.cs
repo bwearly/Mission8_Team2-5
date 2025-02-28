@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Mission8_Team2_5.Migrations
 {
     /// <inheritdoc />
-    public partial class Initial : Migration
+    public partial class initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -30,7 +30,7 @@ namespace Mission8_Team2_5.Migrations
                 name: "Tasks",
                 columns: table => new
                 {
-                    TaskID = table.Column<int>(type: "INTEGER", nullable: false)
+                    TaskId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     TaskName = table.Column<string>(type: "TEXT", nullable: false),
                     DueDate = table.Column<DateOnly>(type: "TEXT", nullable: true),
@@ -40,7 +40,7 @@ namespace Mission8_Team2_5.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Tasks", x => x.TaskID);
+                    table.PrimaryKey("PK_Tasks", x => x.TaskId);
                     table.ForeignKey(
                         name: "FK_Tasks_Categories_CategoryId",
                         column: x => x.CategoryId,

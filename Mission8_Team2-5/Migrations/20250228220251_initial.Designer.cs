@@ -11,8 +11,8 @@ using Mission8_Team2_5.Models;
 namespace Mission8_Team2_5.Migrations
 {
     [DbContext(typeof(TimeManageMatrixContext))]
-    [Migration("20250228212933_Initial")]
-    partial class Initial
+    [Migration("20250228220251_initial")]
+    partial class initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -59,7 +59,7 @@ namespace Mission8_Team2_5.Migrations
 
             modelBuilder.Entity("Mission8_Team2_5.Models.Task", b =>
                 {
-                    b.Property<int>("TaskID")
+                    b.Property<int>("TaskId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
@@ -79,7 +79,7 @@ namespace Mission8_Team2_5.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.HasKey("TaskID");
+                    b.HasKey("TaskId");
 
                     b.HasIndex("CategoryId");
 
