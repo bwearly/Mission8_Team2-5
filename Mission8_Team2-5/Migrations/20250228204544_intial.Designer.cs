@@ -11,8 +11,8 @@ using Mission8_Team2_5.Models;
 namespace Mission8_Team2_5.Migrations
 {
     [DbContext(typeof(TimeManageMatrixContext))]
-    [Migration("20250228203021_initial")]
-    partial class initial
+    [Migration("20250228204544_intial")]
+    partial class intial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
