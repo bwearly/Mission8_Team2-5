@@ -1,4 +1,4 @@
-@model TModel
+@model Task
 
 @{
     Layout = null;
@@ -7,12 +7,12 @@
 <h1>Task Form</h1>
 
 <form method="post">
-    <label asp-for="Task">Task:</label>
-    <input asp-for="Title"/>
+    <label asp-for="TaskName">Task:</label>
+    <input asp-for="TaskName"/>
     <br/>
 
     <label asp-for="DueDate">Due Date:</label>
-    <input asp-for="DueDate"/>
+    <input asp-for="DueDate" type="date"/>
     <br/>
     
     <label asp-for="Quadrant">Quadrant:</label>
@@ -27,15 +27,16 @@
     <label asp-for="CategoryId">Category:</label>
     <select asp-for="CategoryId">
         <option value="">Select a Category:</option>
-        @foreach (Category c in ViewBag.Category)
+        @foreach (Category c in ViewBag.Categories)
         {
-            <option value="@c.CategoryId">@c.CategoryName</option>
+            <option value="@c.CategoryId">@c.Name</option>
         }
     </select>
     <br/>
 
     <label asp-for="Completed">Is this task completed?</label>
     <select asp-for="Completed">
+        <option value="">Select Status</option>
         <option value="True">Yes</option>
         <option value="False">No</option>
     </select>
