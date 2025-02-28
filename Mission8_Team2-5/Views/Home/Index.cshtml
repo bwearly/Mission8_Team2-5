@@ -22,14 +22,14 @@
             <h5>Quadrant 1</h5>
             @foreach (var task in Model.Where(t => t.Quadrant == 1 && (t.Completed == false || t.Completed == null)))
             {
-                <div><a asp-controller="Home" asp-action="Edit" asp-route-id="@task.TaskId">@task.TaskName</a></div>
+                <div><a asp-controller="Home" asp-action="EditTask" asp-route-id="@task.TaskId">@task.TaskName</a></div>
             }
         </div>
         <div class="col-5 p-3 bg-light">
             <h5>Quadrant 2</h5>
             @foreach (var task in Model.Where(t => t.Quadrant == 2 && (t.Completed == false || t.Completed == null)))
             {
-                <div><a asp-controller="Home" asp-action="Edit" asp-route-id="@task.TaskId">@task.TaskName</a></div>
+                <div><a asp-controller="Home" asp-action="EditTask" asp-route-id="@task.TaskId">@task.TaskName</a></div>
             }
         </div>
     </div>
@@ -44,14 +44,14 @@
             <h5>Quadrant 3</h5>
             @foreach (var task in Model.Where(t => t.Quadrant == 3 && (t.Completed == false || t.Completed == null)))
             {
-                <div><a asp-controller="Home" asp-action="Edit" asp-route-id="@task.TaskId">@task.TaskName</a></div>
+                <div><a asp-controller="Home" asp-action="EditTask" asp-route-id="@task.TaskId">@task.TaskName</a></div>
             }
         </div>
         <div class="col-5 p-3 bg-light">
             <h5>Quadrant 4</h5>
             @foreach (var task in Model.Where(t => t.Quadrant == 4 && (t.Completed == false || t.Completed == null)))
             {
-                <div><a asp-controller="Home" asp-action="Edit" asp-route-id="@task.TaskId">@task.TaskName</a></div>
+                <div><a asp-controller="Home" asp-action="EditTask" asp-route-id="@task.TaskId">@task.TaskName</a></div>
             }
         </div>
     </div>
