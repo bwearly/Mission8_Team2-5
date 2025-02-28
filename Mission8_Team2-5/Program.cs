@@ -11,6 +11,8 @@ builder.Services.AddDbContext<TimeManageMatrixContext>(options =>
     options.UseSqlite(builder.Configuration["ConnectionStrings : DatabaseConnection"]);
 });
 
+builder.Services.AddScoped<ITaskRepository, EFTaskRepository>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
