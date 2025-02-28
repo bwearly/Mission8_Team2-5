@@ -7,8 +7,8 @@ namespace Mission8_Team2_5.Controllers
 {
     public class HomeController : Controller
     {
-        private TaskContext _context;
-        public HomeController(TaskContext temp)
+        private TimeManageMatrixContext _context;
+        public HomeController(TimeManageMatrixContext temp)
         {
             _context = temp;
         }
