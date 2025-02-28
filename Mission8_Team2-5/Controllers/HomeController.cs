@@ -4,10 +4,22 @@ using SQLitePCL;
 //using Mission8_Team2_5.Models;
 
 namespace Mission8_Team2_5.Controllers
-{
+{    
+  //public class HomeController : Controller
+
     public class HomeController : Controller
     {
+    //{    
         //private TimeManageMatrixContext _context;
+
+    //    private TimeManageMatrixContext _context;
+    //    public HomeController(TimeManageMatrixContext temp)
+    //    {
+    //        _context = temp;
+    //    }
+
+    //    public IActionResult Index()
+    //    {
         //public HomeController(TimeManageMatrixContext temp)
         //{
         //    _context = temp;
@@ -15,7 +27,6 @@ namespace Mission8_Team2_5.Controllers
 
         //public IActionResult Index()
         //{
-
     //        return View();
     //    }
 
