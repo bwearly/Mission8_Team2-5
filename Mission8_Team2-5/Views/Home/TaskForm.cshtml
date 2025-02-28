@@ -43,5 +43,14 @@
     </select>
     <br/>
 
+    
     <button type="submit">Save Task</button>
+    @if (Model.TaskId > 0)  
+    {
+        <a asp-action="DeleteTask" asp-route-id="@Model.TaskId" class="btn btn-danger">
+            Delete
+        </a>
+    }
+
+
 </form>

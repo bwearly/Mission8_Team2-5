@@ -10,12 +10,10 @@
   <component name="ChangeListManager">
     <list default="true" id="9f400158-2e13-4007-9bb1-ee6101007bd2" name="Changes" comment="accept merges">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mission8_Team2-5/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mission8_Team2-5/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mission8_Team2-5/Migrations/20250228220251_initial.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mission8_Team2-5/Migrations/20250228220251_initial.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mission8_Team2-5/Migrations/TimeManageMatrixContextModelSnapshot.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mission8_Team2-5/Views/Home/Delete.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Mission8_Team2-5/Views/Home/Delete.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission8_Team2-5/Views/Home/Delete.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Mission8_Team2-5/Views/Home/DeleteTask.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mission8_Team2-5/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Mission8_Team2-5/Views/Home/Index.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mission8_Team2-5/Views/Home/TaskForm.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Mission8_Team2-5/Views/Home/TaskForm.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission8_Team2-5/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Mission8_Team2-5/Views/Shared/_Layout.cshtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +26,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="izzy" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -61,20 +59,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.Mission8_Team2-5: http.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "izzy",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.Mission8_Team2-5: http.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;izzy&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.Mission8_Team2-5: http">
     <configuration name="Mission8_Team2-5: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Mission8_Team2-5/Mission8_Team2-5.csproj" />
