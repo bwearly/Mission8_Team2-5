@@ -11,7 +11,7 @@ using Mission8_Team2_5.Models;
 namespace Mission8_Team2_5.Migrations
 {
     [DbContext(typeof(TimeManageMatrixContext))]
-    [Migration("20250228220251_initial")]
+    [Migration("20250228222439_initial")]
     partial class initial
     {
         /// <inheritdoc />
@@ -57,7 +57,7 @@ namespace Mission8_Team2_5.Migrations
                         });
                 });
 
-            modelBuilder.Entity("Mission8_Team2_5.Models.Task", b =>
+            modelBuilder.Entity("Mission8_Team2_5.Models.ToDoTask", b =>
                 {
                     b.Property<int>("TaskId")
                         .ValueGeneratedOnAdd()
@@ -86,7 +86,7 @@ namespace Mission8_Team2_5.Migrations
                     b.ToTable("Tasks");
                 });
 
-            modelBuilder.Entity("Mission8_Team2_5.Models.Task", b =>
+            modelBuilder.Entity("Mission8_Team2_5.Models.ToDoTask", b =>
                 {
                     b.HasOne("Mission8_Team2_5.Models.Category", "Category")
                         .WithMany()
