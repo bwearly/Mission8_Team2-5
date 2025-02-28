@@ -2,14 +2,14 @@
 {
     public interface ITaskRepository
     {
-        List<Task> Tasks { get; }
+        List<ToDoTask> Tasks { get; }
         List<Category> Categories { get; }
 
-        void Add(Task task);
+        void Add(ToDoTask task);
 
-        void Update(Task task);
+        void Update(ToDoTask task);
 
-        void Delete(Task task);
+        void Delete(ToDoTask task);
 
         void SaveChanges();
     }

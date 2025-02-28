@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Mission8_Team2_5.Models;
 using System.Linq;
-using Task = Mission8_Team2_5.Models.Task;
+using ToDoTask = Mission8_Team2_5.Models.ToDoTask;
 
 namespace Mission8_Team2_5.Controllers
 {
@@ -24,11 +24,11 @@ namespace Mission8_Team2_5.Controllers
         public IActionResult TaskForm()
         {
             ViewBag.Categories = _repo.Categories;
-            return View(new Task());
+            return View(new ToDoTask());
         }
 
         [HttpPost]
-        public IActionResult TaskForm(Task response)
+        public IActionResult TaskForm(ToDoTask response)
         {
             if (ModelState.IsValid)
             {
@@ -59,7 +59,7 @@ namespace Mission8_Team2_5.Controllers
         }
 
         [HttpPost]
-        public IActionResult EditTask(Task editTask)
+        public IActionResult EditTask(ToDoTask editTask)
         {
             if (ModelState.IsValid)
             {
@@ -89,7 +89,7 @@ namespace Mission8_Team2_5.Controllers
         }
 
         [HttpPost]
-        public IActionResult DeleteTask(Task deleteTask)
+        public IActionResult DeleteTask(ToDoTask deleteTask)
         {
             _repo.Delete(deleteTask);
             _repo.SaveChanges();

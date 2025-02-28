@@ -11,20 +11,20 @@ namespace Mission8_Team2_5.Models
             _context = temp;
         }
 
-        public List<Task> Tasks => _context.Tasks.Include(t => t.Category).ToList();
+        public List<ToDoTask> Tasks => _context.Tasks.Include(t => t.Category).ToList();
         public List<Category> Categories => _context.Categories.ToList();
 
-        public void Add(Task task)
+        public void Add(ToDoTask task)
         {
             _context.Tasks.Add(task);
         }
 
-        public void Update(Task task)
+        public void Update(ToDoTask task)
         {
             _context.Tasks.Update(task);
         }
 
-        public void Delete(Task task)
+        public void Delete(ToDoTask task)
         {
             _context.Tasks.Remove(task);
         }
