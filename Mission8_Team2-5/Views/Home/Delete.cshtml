@@ -1,0 +1,14 @@
+@model TModel
+
+@{
+    Layout = null;
+}
+@model Task
+
+<h2>Confirm Deletion</h2>
+@Model.Task
+
+<form method="post">
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a class="btn" asp-controller="Home" asp-action="Index">Cancel</a>
+</form>
