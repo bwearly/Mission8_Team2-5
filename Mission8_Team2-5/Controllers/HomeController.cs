@@ -19,62 +19,62 @@ namespace Mission8_Team2_5.Controllers
             return View();
         }
 
-        [HttpGet]
-        public IActionResult TaskForm()
-        {
-            ViewBag.Categories = _repo.Categories.ToList();
+        //[HttpGet]
+        //public IActionResult TaskForm()
+        //{
+        //    ViewBag.Categories = _repo.Categories.ToList();
 
-            return View("TaskForm", new Task());
-        }
+        //    return View("TaskForm", new Task());
+        //}
 
-        [HttpPost]
-        public IActionResult TaskForm(Task reponse)
-        {
-            if (ModelState.IsValid)
-            {
-                _repo.Tasks.Add(response);
-                _repo.SaveChanges();
+        //[HttpPost]
+        //public IActionResult TaskForm(Task reponse)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        _repo.Tasks.Add(response);
+        //        _repo.SaveChanges();
 
-                return View("Confirmation", reponse);
-            }
-            else
-            {
-                ViewBag.Categories = _repo.Categories.ToList();
-                return View(response);
-            }
-        }
+        //        return View("Confirmation", reponse);
+        //    }
+        //    else
+        //    {
+        //        ViewBag.Categories = _repo.Categories.ToList();
+        //        return View(response);
+        //    }
+        //}
 
-        [HttpGet]
-        public IActionResult EditTask(int id)
-        {
-            ViewBag.Categories = _repo.Categories.ToList();
-            var taskToEdit = _repo.Task.Single(x => x.TaskId == id);
+        //[HttpGet]
+        //public IActionResult EditTask(int id)
+        //{
+        //    ViewBag.Categories = _repo.Categories.ToList();
+        //    var taskToEdit = _repo.Task.Single(x => x.TaskId == id);
 
-            return View("TaskForm", taskToEdit);
-        }
+        //    return View("TaskForm", taskToEdit);
+        //}
 
-        [HttpPost]
-        public IActionResult EditTask(Task editTask)
-        {
-            _repo.Update(editTask);
-            _repo.SaveChanges();
+        //[HttpPost]
+        //public IActionResult EditTask(Task editTask)
+        //{
+        //    _repo.Update(editTask);
+        //    _repo.SaveChanges();
 
-            return RedirectToAction("Index");
-        }
+        //    return RedirectToAction("Index");
+        //}
 
-        [HttpGet]
-        public IActionResult DeleteTask(int id)
-        {
-            var recordToDelete = _repo.Tasks.Single(x => x.TaskId == id);
-            return View(recordToDelete);
-        }
+        //[HttpGet]
+        //public IActionResult DeleteTask(int id)
+        //{
+        //    var recordToDelete = _repo.Tasks.Single(x => x.TaskId == id);
+        //    return View(recordToDelete);
+        //}
 
-        [HttpPost]
-        public IActionResult DeleteTask(Task deleteTask)
-        {
-            _repo.Task.Remove(deleteTask);
-            _repo.SaveChanges();
-            return RedirectToAction("Delete");
-        }
+        //[HttpPost]
+        //public IActionResult DeleteTask(Task deleteTask)
+        //{
+        //    _repo.Task.Remove(deleteTask);
+        //    _repo.SaveChanges();
+        //    return RedirectToAction("Delete");
+        //}
     }
 }
