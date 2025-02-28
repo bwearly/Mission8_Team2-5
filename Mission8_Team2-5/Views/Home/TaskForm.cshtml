@@ -1,7 +1,7 @@
 @model TModel
 
 @{
-    Layout = null;
+
 }
 
 <h1>Task Form</h1>
@@ -9,8 +9,8 @@
 <form method="post">
     <input type="hidden" asp-for="TaskId" />
     
-    <label asp-for="Task">Task:</label>
-    <input asp-for="Title"/>
+    <label asp-for="TaskName">Task:</label>
+    <input asp-for="TaskName"/>
     <br/>
 
     <label asp-for="DueDate">Due Date:</label>
@@ -43,5 +43,5 @@
     </select>
     <br/>
 
-    <button type="submit">Submit Task</button>
+    <button type="submit">Save Task</button>
 </form>
