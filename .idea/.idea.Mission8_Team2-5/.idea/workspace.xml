@@ -9,10 +9,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f400158-2e13-4007-9bb1-ee6101007bd2" name="Changes" comment="date edits">
+      <change afterPath="$PROJECT_DIR$/Mission8_Team2-5/Migrations/20250228220251_initial.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mission8_Team2-5/Migrations/20250228220251_initial.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mission8_Team2-5/Migrations/TimeManageMatrixContextModelSnapshot.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mission8_Team2-5/Models/EFTaskRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mission8_Team2-5/Models/ITaskRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mission8_Team2-5/Models/TimeManageMatrixContext.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mission8_Team2-5/Models/ToDoTask.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mission8_Team2-5/TimeManageMatrix.sqlite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mission8_Team2-5/TimeManageMatrix.sqlite-shm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mission8_Team2-5/TimeManageMatrix.sqlite-wal" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mission8_Team2-5/Views/Home/Confirmation.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mission8_Team2-5/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mission8_Team2-5/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mission8_Team2-5/Views/Home/Delete.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Mission8_Team2-5/Views/Home/Delete.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mission8_Team2-5/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Mission8_Team2-5/Views/Home/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mission8_Team2-5/Views/Home/TaskForm.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Mission8_Team2-5/Views/Home/TaskForm.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission8_Team2-5/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Mission8_Team2-5/Controllers/HomeController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission8_Team2-5/Models/Category.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Mission8_Team2-5/Models/Category.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission8_Team2-5/Models/Task.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission8_Team2-5/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Mission8_Team2-5/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission8_Team2-5/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Mission8_Team2-5/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +52,12 @@
     &quot;accountId&quot;: &quot;320973e6-c72f-4fa9-b843-fdcb9c432970&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Users/isabelleturner/RiderProjects/Mission8_Team2-5/Mission8_Team2-5/Views/Home/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/isabelleturner/RiderProjects/Mission8_Team2-5/Mission8_Team2-5/Views/Home/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/isabelleturner/RiderProjects/Mission8_Team2-5/Mission8_Team2-5/Views/Home/TaskForm.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/isabelleturner/RiderProjects/Mission8_Team2-5/Mission8_Team2-5/Views/Home/TaskForm.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
@@ -53,7 +72,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "izzy",
+    "git-widget-placeholder": "Merging izzy",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
