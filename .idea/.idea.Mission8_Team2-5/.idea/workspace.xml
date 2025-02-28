@@ -8,29 +8,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f400158-2e13-4007-9bb1-ee6101007bd2" name="Changes" comment="date edits">
-      <change afterPath="$PROJECT_DIR$/Mission8_Team2-5/Migrations/20250228220251_initial.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mission8_Team2-5/Migrations/20250228220251_initial.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mission8_Team2-5/Migrations/TimeManageMatrixContextModelSnapshot.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mission8_Team2-5/Models/EFTaskRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mission8_Team2-5/Models/ITaskRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mission8_Team2-5/Models/TimeManageMatrixContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mission8_Team2-5/Models/ToDoTask.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mission8_Team2-5/TimeManageMatrix.sqlite" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mission8_Team2-5/TimeManageMatrix.sqlite-shm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mission8_Team2-5/TimeManageMatrix.sqlite-wal" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mission8_Team2-5/Views/Home/Confirmation.cshtml" afterDir="false" />
+    <list default="true" id="9f400158-2e13-4007-9bb1-ee6101007bd2" name="Changes" comment="accept merges">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mission8_Team2-5/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mission8_Team2-5/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mission8_Team2-5/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Mission8_Team2-5/Controllers/HomeController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mission8_Team2-5/Models/Category.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Mission8_Team2-5/Models/Category.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mission8_Team2-5/Models/Task.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mission8_Team2-5/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Mission8_Team2-5/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mission8_Team2-5/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Mission8_Team2-5/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission8_Team2-5/Migrations/20250228220251_initial.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission8_Team2-5/Migrations/20250228220251_initial.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission8_Team2-5/Migrations/TimeManageMatrixContextModelSnapshot.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission8_Team2-5/Views/Home/Delete.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Mission8_Team2-5/Views/Home/Delete.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission8_Team2-5/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Mission8_Team2-5/Views/Home/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission8_Team2-5/Views/Home/TaskForm.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Mission8_Team2-5/Views/Home/TaskForm.cshtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DpaMonitoringSettings">
+    <option name="firstShow" value="false" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -70,9 +63,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    ".NET Launch Settings Profile.Mission8_Team2-5: http.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "Merging izzy",
+    "git-widget-placeholder": "izzy",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -163,7 +157,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740775091386</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="accept merges">
+      <option name="closed" value="true" />
+      <created>1740781751790</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1740781751790</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,6 +180,7 @@
     <MESSAGE value="delete page and minor edits" />
     <MESSAGE value="minor changes" />
     <MESSAGE value="date edits" />
-    <option name="LAST_COMMIT_MESSAGE" value="date edits" />
+    <MESSAGE value="accept merges" />
+    <option name="LAST_COMMIT_MESSAGE" value="accept merges" />
   </component>
 </project>
