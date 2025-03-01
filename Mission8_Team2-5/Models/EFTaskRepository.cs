@@ -24,7 +24,7 @@ namespace Mission8_Team2_5.Models
             _context.Tasks.Update(task);
         }
 
-        public void Delete(ToDoTask task)
+        public void RemoveTask(ToDoTask task)
         {
             _context.Tasks.Remove(task);
             _context.SaveChanges();

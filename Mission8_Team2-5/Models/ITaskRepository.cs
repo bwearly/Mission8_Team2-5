@@ -9,7 +9,7 @@
 
         void Update(ToDoTask task);
 
-        void Delete(ToDoTask task);
+        void RemoveTask(ToDoTask task);
 
         void SaveChanges();
     }

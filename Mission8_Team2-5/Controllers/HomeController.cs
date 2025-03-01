@@ -80,7 +80,7 @@ namespace Mission8_Team2_5.Controllers
         {
             if (deleteTask.TaskId > 0)
             {
-                _repo.Delete(deleteTask);
+                _repo.RemoveTask(deleteTask);
                 _repo.SaveChanges();
             }
 
