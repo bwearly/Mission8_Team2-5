@@ -1,21 +1,18 @@
 @model Mission8_Team2_5.Models.ToDoTask
 
-@{
-
-}
-
 <h1>Task Form</h1>
 
+<!-- Main Form for Creating or Editing a Task -->
 <form method="post">
     <input type="hidden" asp-for="TaskId" />
-    
+
     <label asp-for="TaskName">Task:</label>
-    <input asp-for="TaskName" class="form-control"/>
-    <br/>
+    <input asp-for="TaskName" class="form-control" />
+    <br />
 
     <label asp-for="DueDate">Due Date:</label>
-    <input type="date" class="form-control" asp-for="DueDate"/>
-    <br/>
+    <input type="date" class="form-control" asp-for="DueDate" />
+    <br />
 
     <label asp-for="Quadrant">Quadrant:</label>
     <select asp-for="Quadrant" class="form-control">
@@ -25,7 +22,7 @@
         <option value="3">Not Important / Urgent</option>
         <option value="4">Not Important / Not Urgent</option>
     </select>
-    <br/>
+    <br />
 
     <label asp-for="CategoryId">Category:</label>
     <select asp-for="CategoryId" class="form-control">
@@ -35,7 +32,7 @@
             <option value="@c.CategoryId">@c.Name</option>
         }
     </select>
-    <br/>
+    <br />
 
     <label asp-for="Completed">Is this task completed?</label>
     <select asp-for="Completed" class="form-control">
@@ -43,7 +40,15 @@
         <option value="true">Yes</option>
         <option value="false">No</option>
     </select>
-    <br/>
+    <br />
 
-    <button class="btn btn-green" type="submit">Save Task</button>
+    <button class="btn btn-royal" type="submit">Save Task</button>
 </form>
+
+<!-- Separate Form for Deleting the Task -->
+@if (Model.TaskId > 0)
+{
+    <form method="post" asp-action="DeleteTask" asp-route-id="@Model.TaskId" class="mt-3">
+        <button type="submit" class="btn btn-danger">Delete Task</button>
+    </form>
+}

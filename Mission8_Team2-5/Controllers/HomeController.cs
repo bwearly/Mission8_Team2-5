@@ -78,8 +78,11 @@ namespace Mission8_Team2_5.Controllers
         [HttpPost]
         public IActionResult DeleteTask(ToDoTask deleteTask)
         {
-            _repo.Delete(deleteTask);
-            _repo.SaveChanges();
+            if (deleteTask.TaskId > 0)
+            {
+                _repo.Delete(deleteTask);
+                _repo.SaveChanges();
+            }
 
             return RedirectToAction("Index");
         }
