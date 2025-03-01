@@ -1,23 +1,25 @@
 ﻿@model List<ToDoTask>
 @{
+    // Set the page title in ViewData
     ViewData["Title"] = "Time Management Matrix";
 }
 
 <div class="container text-center mt-4">
     <h2 class="mb-4">Stephen Covey's Time Management Matrix</h2>
 
+    <!-- Header Row: Labels for Urgent and Not Urgent -->
     <div class="row border border-dark">
-        <!-- Header Row -->
         <div class="col-6 border-end border-dark fw-bold p-2">Urgent</div>
         <div class="col-6 fw-bold p-2">Not Urgent</div>
     </div>
 
+    <!-- First Row: Important Tasks (Quadrants 1 & 2) -->
     <div class="row border border-dark">
-        <!-- Important Label -->
+        <!-- Label for Important tasks, rotated vertically -->
         <div class="col-2 border-end border-dark fw-bold d-flex align-items-center justify-content-center p-2" style="writing-mode: vertical-rl; transform: rotate(180deg);">
             Important
         </div>
-        <!-- Quadrants 1 & 2 -->
+        <!-- Quadrant 1: Important & Urgent Tasks -->
         <div class="col-5 border-end border-dark p-3 bg-light">
             <h5>Quadrant 1</h5>
             @foreach (var task in Model.Where(t => t.Quadrant == 1 && (t.Completed == false || t.Completed == null)))
@@ -25,6 +27,7 @@
                 <div><a asp-controller="Home" asp-action="EditTask" asp-route-id="@task.TaskId">@task.TaskName</a></div>
             }
         </div>
+        <!-- Quadrant 2: Important but Not Urgent Tasks -->
         <div class="col-5 p-3 bg-light">
             <h5>Quadrant 2</h5>
             @foreach (var task in Model.Where(t => t.Quadrant == 2 && (t.Completed == false || t.Completed == null)))
@@ -34,12 +37,13 @@
         </div>
     </div>
 
+    <!-- Second Row: Not Important Tasks (Quadrants 3 & 4) -->
     <div class="row border border-dark">
-        <!-- Not Important Label -->
+        <!-- Label for Not Important tasks, rotated vertically -->
         <div class="col-2 border-end border-dark fw-bold d-flex align-items-center justify-content-center p-2" style="writing-mode: vertical-rl; transform: rotate(180deg);">
             Not Important
         </div>
-        <!-- Quadrants 3 & 4 -->
+        <!-- Quadrant 3: Not Important but Urgent Tasks -->
         <div class="col-5 border-end border-dark p-3 bg-light">
             <h5>Quadrant 3</h5>
             @foreach (var task in Model.Where(t => t.Quadrant == 3 && (t.Completed == false || t.Completed == null)))
@@ -47,6 +51,7 @@
                 <div><a asp-controller="Home" asp-action="EditTask" asp-route-id="@task.TaskId">@task.TaskName</a></div>
             }
         </div>
+        <!-- Quadrant 4: Not Important & Not Urgent Tasks -->
         <div class="col-5 p-3 bg-light">
             <h5>Quadrant 4</h5>
             @foreach (var task in Model.Where(t => t.Quadrant == 4 && (t.Completed == false || t.Completed == null)))

@@ -4,16 +4,20 @@
 
 <!-- Main Form for Creating or Editing a Task -->
 <form method="post">
+    <!-- Hidden field to store TaskId for editing existing tasks -->
     <input type="hidden" asp-for="TaskId" />
 
+    <!-- Task Name Input -->
     <label asp-for="TaskName">Task:</label>
     <input asp-for="TaskName" class="form-control" />
     <br />
 
+    <!-- Due Date Input -->
     <label asp-for="DueDate">Due Date:</label>
     <input type="date" class="form-control" asp-for="DueDate" />
     <br />
 
+    <!-- Quadrant Selection Dropdown -->
     <label asp-for="Quadrant">Quadrant:</label>
     <select asp-for="Quadrant" class="form-control">
         <option value="">Select a priority</option>
@@ -24,6 +28,7 @@
     </select>
     <br />
 
+    <!-- Category Selection Dropdown -->
     <label asp-for="CategoryId">Category:</label>
     <select asp-for="CategoryId" class="form-control">
         <option value="">Select a Category:</option>
@@ -34,6 +39,7 @@
     </select>
     <br />
 
+    <!-- Completion Status Dropdown -->
     <label asp-for="Completed">Is this task completed?</label>
     <select asp-for="Completed" class="form-control">
         <option value="">Select a Completion Status</option>
@@ -42,13 +48,14 @@
     </select>
     <br />
 
+    <!-- Save Task Button -->
     <button class="btn btn-royal" type="submit">Save Task</button>
 </form>
 
-<!-- Separate Form for Deleting the Task -->
+<!-- Delete Task Button (Only shown if editing an existing task) -->
 @if (Model.TaskId > 0)
 {
-    <form method="post" asp-action="DeleteTask" asp-route-id="@Model.TaskId" class="mt-3">
-        <button type="submit" class="btn btn-danger">Delete Task</button>
-    </form>
+    <a class="btn btn-danger mt-3" asp-controller="Home" asp-action="Delete" asp-route-id="@Model.TaskId">
+        Delete Task
+    </a>
 }

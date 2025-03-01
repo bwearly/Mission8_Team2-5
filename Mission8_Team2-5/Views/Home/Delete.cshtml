@@ -1,0 +1,16 @@
+﻿@model ToDoTask
+
+<!-- Delete Confirmation Page -->
+<h2>Confirm Deletion</h2>
+<p>Are you sure you want to delete the task "<strong>@Model.TaskName</strong>"?</p>
+
+<form asp-action="DeleteConfirmed" method="post">
+    <!-- Hidden field to pass task ID to the controller -->
+    <input type="hidden" name="id" value="@Model.TaskId" />
+
+    <!-- Confirm Delete Button -->
+    <button type="submit" class="btn btn-danger">Yes, Delete</button>
+
+    <!-- Cancel Button: Redirects back to the task list -->
+    <a class="btn btn-secondary" asp-controller="Home" asp-action="Index">Cancel</a>
+</form>
