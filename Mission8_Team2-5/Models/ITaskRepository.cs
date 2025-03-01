@@ -15,7 +15,6 @@
         // Updates an existing task
         void Update(ToDoTask task);
 
-        // Deletes a task
         void Delete(ToDoTask task);
 
         // Saves changes to the database and returns the number of affected rows

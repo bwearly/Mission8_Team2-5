@@ -31,7 +31,6 @@ namespace Mission8_Team2_5.Models
             _context.Tasks.Update(task);
         }
 
-        // Deletes a task from the database and saves changes
         public void Delete(ToDoTask task)
         {
             _context.Tasks.Remove(task);
