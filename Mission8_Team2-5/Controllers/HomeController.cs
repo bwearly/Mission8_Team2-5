@@ -86,8 +86,7 @@ namespace Mission8_Team2_5.Controllers
             var task = _repo.Tasks.SingleOrDefault(x => x.TaskId == id);
             if (task == null)
             {
-                _repo.Delete(deleteTask);
-                _repo.SaveChanges();
+                return NotFound();
             }
 
             _repo.Delete(task);
